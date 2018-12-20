@@ -1,8 +1,6 @@
 package com.codegym.managerpurchase.model;
 
-import lombok.AllArgsConstructor;
-import lombok.Data;
-import lombok.NoArgsConstructor;
+import lombok.*;
 import org.hibernate.validator.constraints.Length;
 
 import javax.persistence.*;
@@ -15,6 +13,8 @@ import java.util.Set;
 @Table(name = "user")
 @AllArgsConstructor
 @NoArgsConstructor
+@Getter
+@Setter
 public class User {
 
     @Id
@@ -46,5 +46,4 @@ public class User {
                 inverseJoinColumns = @JoinColumn(name = "role_id")
     )
     private Set<Role> roles;
-
 }

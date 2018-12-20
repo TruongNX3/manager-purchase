@@ -1,8 +1,6 @@
 package com.codegym.managerpurchase.model;
 
-import lombok.AllArgsConstructor;
-import lombok.Data;
-import lombok.NoArgsConstructor;
+import lombok.*;
 
 import javax.persistence.*;
 
@@ -12,6 +10,8 @@ import javax.persistence.*;
 @Table(name = "role")
 @AllArgsConstructor
 @NoArgsConstructor
+@Getter
+@Setter
 public class Role {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
